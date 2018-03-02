@@ -1,0 +1,6 @@
+#include <iostream>
+{
+  std:: cout <<"hola NICOLAS"\n";
+ return 0;
+}
+

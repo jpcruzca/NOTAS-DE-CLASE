@@ -1,0 +1,14 @@
+#include<iostream>
+int main()
+{
+  int w=0;
+
+  std::cout << "¿cual es tu edad";
+
+  std::cin >> w;
+
+  std::cout << " tu masa es : "<< w <<" kg\n";
+
+  return 0;
+}
+  
