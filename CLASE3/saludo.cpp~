@@ -1,0 +1,15 @@
+#include<iostream>
+#include<string>
+string saludo(std::string a)
+{
+  std::cout<< " hello " << a << "\n";
+  return;
+}
+
+int main ()
+{
+  std::string a = "nombre";
+  cin >> a;
+  saludo(a);
+  return 0;
+}

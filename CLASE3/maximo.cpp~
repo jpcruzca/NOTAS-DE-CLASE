@@ -1,0 +1,16 @@
+#include<iostream>
+
+int max(int a, int b)
+{
+  if (a>b)
+    return a;
+  else (b>a)
+    return b;
+}
+
+int main()
+{
+  std::cout << max << "\n";
+  
+  return 0;
+}
