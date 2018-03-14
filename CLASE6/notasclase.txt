@@ -1,0 +1,38 @@
+for
+while
+
+do{
+
+
+}while(n<=N)
+el do while por lo menos se ejecuta una vez, antes de verificar si la condicion
+del bucle es verdadera.
+-1
+
+
+el break; es un comando que detiene el bucle  en el que se encuentre.
+el coutinue; no ejecurta el comando que le precede, pero no se sale del bucle ;
+
+
+Switch;
+
+switch(a)
+{
+
+case 0;
+A(a)
+break;
+case 1;
+B(a)
+
+.
+.
+.
+
+default;
+D(a)
+
+
+}
+el switch es equivalente a usar el if y else if.
+

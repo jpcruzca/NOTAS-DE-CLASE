@@ -1,0 +1,9 @@
+for
+while
+
+do{
+
+
+}while(n<=N)
+el do while por lo menos se ejecuta una vez, antes de verificar si la condicion
+del bucle es verdadera.

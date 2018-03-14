@@ -1,0 +1,21 @@
+#include<iostream>
+int suma2(int N);
+int main(void)
+{
+  int N,i;
+  
+  std::cin>>i;
+  std::cin>>N;
+  std::cout << suma2(N)<< std::endl;
+}
+int suma2(int N)
+{
+  int r=0 ,i=0;
+  
+    do{
+      r+=i;
+      i++;
+    } while(i<=N) 	
+    
+  return r;
+}
