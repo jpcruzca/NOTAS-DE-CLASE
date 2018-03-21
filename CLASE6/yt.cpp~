@@ -1,0 +1,20 @@
+#include<iostream>
+#include<cmath>
+double posicion(double t, double v_o);
+int main()
+{
+  double t, v_o;
+  std::cin>> v_o;
+  for (t=0; t<=2*v_o/g; t++)
+    {
+      std::cout << posicion(t,v_o)
+    }
+}
+double posicion(double t, double v_o)
+{
+  double y;
+  double g=9.8;
+  
+  y=v_o*t+1/2*g*pow(t,2);
+  return y;
+    }

@@ -1,0 +1,7 @@
+forma de encontrar raices.
+MODO GRAFICO
+gnuplot
+f(x)
+plot [limx: limfx] [limy:limyf] fuction()
+
+biseccion
