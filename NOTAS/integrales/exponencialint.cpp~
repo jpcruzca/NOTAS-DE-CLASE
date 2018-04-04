@@ -1,0 +1,35 @@
+#include<iostream>
+#include<cmath>
+using fptr = double(double);
+double trapezoid(const double a, const double b, const int n, fptr func );
+// funcion para integrar ppopr el metodo de los trapecios.
+double traperich(const double a, const double b, const int n, fptr func );
+int main()
+{
+  std::cout.precision(10);
+  int n=1000000, n2=2000000;
+  double a=0, b=1;
+  std::cout<< n <<"\t"<< trapezoid(a,b,n, std::exp)<< std::endl;
+  std::cout<< n2 <<"\t"<< trapezoid(a,b,n2, std::exp)<< std::endl;
+  std::cout<< n <<"\t"<< traperich(a,b,n, std::exp)<< std::endl;
+   std::cout<< n2 <<"\t"<< traperich(a,b,n2, std::exp)<< std::endl;
+   std::cout << "REAL "<< actan(x)*x-0.5* << std::endl;// falta añadir logaritmo natural, para completar el valor exacto de la integral.  
+  
+  return 0;
+
+}
+double trapezoid(const double a, const double b, const int n, fptr func )
+{
+  
+  double h=(b-a)/n;
+  double x, sum=0.5*func(a)+func(b);
+  for(int i=1; i<=n; i++){
+    x=a+i*h;
+    sum+=func(x);
+   }
+  return h*sum;
+}
+double traperich(const double a, const double b, const int n, fptr func )
+{
+  return (4*trapezoid(a,b,2*n, func)-trapezoid(a,b,n,func))/3.0;
+}
