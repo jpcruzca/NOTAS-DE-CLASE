@@ -1,0 +1,27 @@
+#include<iostream>
+#include<cmath>
+using fptr=double(double);
+double f(double x);
+double df(double x);
+double newton(fptr f,fptr df, int max, double eps);
+int main()
+{
+
+}
+double f(double x)
+{
+  return std::sin(x);
+}
+double df(double x)
+{
+  return std::cos(x);
+}
+double newton(fptr f,fptr df, int max, double eps)
+{
+  double xr;
+  for(int i=0; i<max || std::abs(f(xr)<eps); i++ )
+    {
+      xr=x-f(x)/f(x);
+      x=xr;
+    }
+}

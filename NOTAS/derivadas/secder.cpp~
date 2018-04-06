@@ -1,0 +1,29 @@
+#include<iostream>
+#include<cmath>
+using fun = double(double);
+using fptr= double(double,double, fun);
+double f(double x);
+double dervC(double x, double h, fun f);
+int main ()
+{
+  std::cout.precision(16);
+  std::cout.setf(std::ios::scientific);
+  double x=0, h=0.001;
+  std::cout << derv(x,h,f)<<"\t"<< h <<std::endl;
+  std::cout << dervC(x,h,f)<<"\t"<< h <<std::endl;
+  std::cout << dervCR(x,h,f)<<"\t"<< h <<std::endl;
+  error(x,h,f);
+  return 0;
+}
+double f(double x)
+{
+  return std::cos(x);
+}
+double derv(double x, double h, fun f)
+{
+  return (f(x+h)-f(x))/h;
+}
+double 2derv(double x, double h, fptr derv)
+{
+  return(derv(x+h,h,f)-f(x,h,f))/h;
+}

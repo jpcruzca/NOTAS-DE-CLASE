@@ -7,8 +7,8 @@ void print(int n, std::string name);
 int main()
 
 {
-  print(100, "datosfout.txt");
-  print(200, "datosfout2.txt");
+  print(100, "datosfoutj.txt");
+  print(200, "datosfoutk.txt");
   return 0;
 }
 void print(int n, std::string name)

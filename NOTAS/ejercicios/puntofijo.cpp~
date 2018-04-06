@@ -1,0 +1,12 @@
+#include<iostream>
+#include<cmath>
+using f=double(double);
+double pf(double x);
+int main()
+{
+  
+}
+double pf(double x)
+{
+  
+}
