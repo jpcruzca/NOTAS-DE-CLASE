@@ -1,0 +1,24 @@
+arreglos matrices y apuntadores.
+
+*built in
+int data[100000] ;//sepide memoria para 100000 de enteros.
+
+data[7]=20; //asignando valor al dato 8. ya que en la memoria se empieza acontar desde cero.
+
+int sum=0;
+for(int ii=0; ii<n;ii++)
+{
+	sum+=data[ii];
+}
+double arg=sum/n; //calculando el promedio de n numeros
+
+*array (c++11)
+
+std::array<int,100000> data;
+data[7]=20;
+
+*vectors
+std::vector<int> data;
+data.resrze(100000);
+data[7]=20;
+

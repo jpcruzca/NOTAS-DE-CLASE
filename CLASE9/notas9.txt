@@ -1,0 +1,8 @@
+generacion de numeros aleatorios.
+la semilla es muy importante. seed
+libreria <random>
+
+g++ ____objetos ___ejecutable
+
+g++ -c //para la creacion de objetos
+g++ program. cpp bibliotecas.cpp

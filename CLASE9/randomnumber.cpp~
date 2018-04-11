@@ -1,0 +1,13 @@
+#include<random>
+#include<iostream>
+int main(void)
+{
+  int seed=0;
+  std::mtl9937 gen(se);
+  std::normal_distribution<> dis(1.5,0.3);
+  for(int i=0; i<1000; i++)
+    {
+      std::dis(gen)<<std::endl;
+    }
+}
+

@@ -1,0 +1,37 @@
+arreglos matrices y apuntadores.
+
+*built in
+int data[100000] ;//sepide memoria para 100000 de enteros.
+
+data[7]=20; //asignando valor al dato 8. ya que en la memoria se empieza acontar desde cero.
+
+int sum=0;
+for(int ii=0; ii<n;ii++)
+{
+	sum+=data[ii];
+}
+double arg=sum/n; //calculando el promedio de n numeros
+
+*array (c++11)
+#include<array>
+
+std::array<int,100000> data;
+data[7]=20;
+
+*vectors
+std::vector<int> data;
+data.resize(100000);
+data[7]=20;
+**
+stak=> memoria pequeña
+heap=> memoria dinamica;
+       new delete
+       vectors
+       data.push_back()
+**
+-fsanitize= adress -g
+-fsanitize=leak
+
+**
+double mean(const std::vector<double> &a); //declaracion de la funcion con arreglos => el & es pasr los datos por referencia.
+
