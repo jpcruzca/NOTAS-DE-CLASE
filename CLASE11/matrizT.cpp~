@@ -1,0 +1,17 @@
+#include<iostream>
+#include<vector>
+const int n=3;
+const int m=5;
+int main(void)
+{
+  double A[n][m]={{0.0}};
+  double AT[m][n]={{0.0}};
+  for(int i=0; i<n; i++)
+    {
+      for(int j=0; i<m; j++)
+	{
+	  A[i][j]=i*j;
+	}
+    }
+  
+}

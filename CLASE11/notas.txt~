@@ -1,0 +1,14 @@
+Arreglos y matrices;
+
+** la memoria guarda dependiendo del tipo de dato que se almacene en el arrglo;
+Matrices;
+
+para hacer que las matrices sean eficientes, haciendolas unidimencionales utilizando dos indices.
+** para hacer eficiente el codigo al programar matrices, se debe hacer que el indice recorra la matriz en la forma en que el computador guarda los datos.
+=> Datos contiguos
+
+for(i{
+for(j
+}
+
+MT

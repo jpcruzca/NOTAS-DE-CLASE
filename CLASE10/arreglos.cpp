@@ -13,8 +13,8 @@ int main(void)
     {
       data[i]=i;
     }
-  
-  std::cout<< prom(data)<<std::endl; 
+  avg= prom(data);
+  //std::cout<< prom(data)<<std::endl; 
 }
 double prom(const std::vector<double>&a)
 {

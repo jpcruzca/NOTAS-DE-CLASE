@@ -1,0 +1,37 @@
+Arreglos y matrices;
+
+** la memoria guarda dependiendo del tipo de dato que se almacene en el arrglo;
+Matrices;
+
+para hacer que las matrices sean eficientes, haciendolas unidimencionales utilizando dos indices.
+** para hacer eficiente el codigo al programar matrices, se debe hacer que el indice recorra la matriz en la forma en que el computador guarda los datos.
+=> Datos contiguos
+
+for(i{
+for(j
+}
+
+MT=> ejemplo en matrizT.cpp
+
+paso de indices dos-dimensionales a uni-dimensionales
+________
+id=i*N+j
+________
+***
+
+PUNTEROS:
+putero => guarda direcciones de memoria; hexadecimal
+int a=0; 
+int*ptr=&a;// se le esta asignando a ptr la dirccion de memoria de la variable a
+
+cout<< ptr<<\n; imprime la direccion de memoria
+cout<< *ptr<< "\n"; imprime el valor al que el puntero apunta.
+los punteros y los arreglos son similares
+numbers[20];
+int * p;
+p[3]// es lo mismo que numbers[20]
+
+**__**__**__**
+std::unique_ptr //punteros modernos
+std::shared_ptr //
+
