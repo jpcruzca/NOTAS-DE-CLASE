@@ -6,6 +6,7 @@ double dev(const std::vector<double>&a, double avg);
 double prom(const std::vector<double>&a);
 int main(void)
 {
+  double avg;
   const int N=10;
   std::vector<double> data;
   data.resize(N);
@@ -13,8 +14,8 @@ int main(void)
     {
       data[i]=i;
     }
-  avg= prom(data);
-  //std::cout<< prom(data)<<std::endl; 
+  avg =prom(data);
+  std::cout<< prom(data,avg)<<std::endl; 
 }
 double prom(const std::vector<double>&a)
 {
@@ -26,10 +27,11 @@ double prom(const std::vector<double>&a)
     }
  return sum1/N;
 }
-double dev(const std::vector<double>&a,int &N, double avg)
+double dev(const std::vector<double>&a,double avg)//funcion para  calcular la desviacion estandar.
 {
+  int N=a.size();
   double sum=0;
-  for(int i=0; i<n; ++i)
+  for(int i=0; i<N; ++i)
     {
       sum=((data[i]-avg)*(data[i]-avg));
 }

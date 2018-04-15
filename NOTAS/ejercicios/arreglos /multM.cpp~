@@ -1,0 +1,65 @@
+#include<iostream>
+#include<cmath>
+#include<vector>
+const int n=5;
+const int m=5;
+int main()
+{
+  std::vector<double> M(m*n);
+  std::vector<double> MP(m*n);
+  std::vector<double> MMP(m*n);
+  std::vector<double> MT(m*n);
+  
+  //M.size(n*m);//con este programa se realiza multilplicacion de matrices con tamaños iguales, pero hay que arreglar un problema en las sumas parciales, utilice la transpuesta para multiplicar mas facil:
+  std::cout<< "M" <<std::endl; //MATRIZ 1
+  for(int i=0; i<n;i++)
+    {
+      for(int j=0; j<m; j++)
+	{
+	  M[i*n+j]=i*n+j+1;
+	  std::cout<<M[i*n+j]<< "  "; 
+	}
+      std::cout<<"\n";
+    }
+  std::cout<<"MP" <<std::endl; //MATRIZ 2
+  for(int i=0; i<n;i++)
+    {
+      for(int j=0; j<m; j++)
+	{
+	  M[i*n+j]=j*m+i+1;
+	  std::cout<<M[i*n+j]<< "  "; 
+	}
+      std::cout<<"\n";
+    }
+  std::cout<<"MT"<<std::endl;//TRANSPUESTA
+  for(int i=0; i<m;i++)
+    {
+      for(int j=0; j<n; j++)
+	{
+	  MT[i*n+j]=MP[j*m+i];
+	  std::cout<<M[i*n+j]<< "  "; 
+	}
+      std::cout<<"\n";
+    }
+  
+  std::cout<< "M*MP" <<std::endl;//MULTIPLICACION
+  double sum=0; 
+  for(int i=0; i<n;i++)
+    {
+      for(int j=0; j<m; j++)
+	{
+	  for(int ii=0; ii<m;ii++)
+	    {
+	      // for(int jj=0;j<m; jj++ )
+	      MMP[i*n+j] += (M[i*n+ii])*(MT[ii*n+j]);
+	    }
+	  std::cout<<MT[i*n+j]<< "  "; 
+	}
+      std::cout<<"\n";
+      //std::cout<<sum<<std::endl;
+      
+    }
+	   
+  std::cout<<"\n";
+  
+}

@@ -1,0 +1,44 @@
+#include<iostream>
+#include<vector>
+const int n=5,m=4;
+void prin(std::vector<double> &a);
+double T(std::vector<double> &a, std::vector<double> &b);
+int main()
+{
+  std::vector<double> matriz(n*m);
+  std::vector<double> matrizT(m*n);
+  for(int i=0; i<n;i++)
+    {
+      for(int j=0; j<m;j++)
+	{
+	  matriz[i*n+j]=i*j;
+	}
+    }
+  prin(matriz);
+  std::cout<< "\n";
+  T(matriz,matrizT);
+  
+}
+void prin(std::vector<double> &a)
+{
+  for(int i=0; i<n; i++)
+    {
+      for (int j=0; j<m; j++)
+	{
+	  std::cout<< a[i*n+j]<<" ";
+	}
+      std::cout<<"\n";
+    }
+}
+double T(std::vector<double> &a, std::vector<double> &b)
+{
+  for (int j=0; j<m; j++)
+    {
+      for(int i=0; i<n;i++)
+	{
+	  a[i*n+j]=b[j*m+i];
+	  std::cout<<b[i*n+j];
+	}
+      std::cout<< "\n";
+    }
+}

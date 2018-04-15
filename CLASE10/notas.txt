@@ -1,7 +1,7 @@
 arreglos matrices y apuntadores.
 
 *built in
-int data[100000] ;//sepide memoria para 100000 de enteros.
+int data[100000] ;//se pide memoria para 100000 de enteros.
 
 data[7]=20; //asignando valor al dato 8. ya que en la memoria se empieza acontar desde cero.
 
