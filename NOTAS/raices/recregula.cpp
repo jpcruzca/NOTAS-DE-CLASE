@@ -16,22 +16,21 @@ double f(double x)
   return  x+std::exp(x);
 }
 
-double regula(double xl, double xu, double eps, double Nmax,fun f )
+double regula(double xl, double xu, double eps, double Nmax,fun f )//funcion regula falsi recursiva
 {
   double xr;
   for (int i=0; i<Nmax; i++)
     {
       xr=xu-f(xu)*(xl-xu)/(f(xl)-f(xu));
-      if(std::fabs(f(xr)) < eps) break;
       if(f(xl)*f(xr) > 0)
 	xl=xr;
       else
 	xu=xr;
-      std::cout<< xr << " "<<f(xr)<<std::endl;
+      std::cout<< xr <<"  "<< f(xr)<<std::endl;
+      if(std::fabs(f(xr)) < eps)return xr;
+      else
+	return regula(xl,xu,eps,Nmax,f);
     }
 
-return xr;
+
 }
-	
-    
-  
