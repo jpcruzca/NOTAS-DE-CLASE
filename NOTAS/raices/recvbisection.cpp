@@ -20,17 +20,14 @@ double f(double x)
 double bisection(double xl, double xu, double eps, double Nmax,fun f )
 {
   double xr;
-  for (int i=0; i<Nmax; i++)
-    {
+    
       xr=0.5*(xu+xl);
       if(f(xl)*f(xr) > 0)
 	xl=xr;
       else
 	xu=xr;
-      if(std::fabs(f(xr)) < eps)
+      if(std::fabs(f(xr)) < eps ||  Nmax==0)
 	return xr;
       else
-	return bisection(xl,xu,eps,Nmax,f);
-    }
-  
+	return bisection(xl,xu,eps,Nmax-1, f); 
 }

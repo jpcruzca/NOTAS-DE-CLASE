@@ -1,10 +1,10 @@
 #include<iostream>
 #include<cmath>
 #include<vector>
-const int n=5;
-const int m=5;
-const int s=5;
-const int r=3;
+const int n=3;
+const int m=4;
+const int s=4;
+const int r=2;
 void mult(std::vector<double> &a, std::vector<double> &b, std::vector<double> &c);
 int main()
 {
@@ -16,8 +16,8 @@ int main()
     {
       for(int j=0; j<m; j++)
 	{
-	  A[i*n+j]=i*n+j+1;
-	  std::cout<<A[i*n+j]<< "  "; 
+	  A[i*m+j]=i*m+j;
+	  std::cout<<A[i*m+j]<< "  "; 
 	}
       std::cout<<"\n";
     }
@@ -27,8 +27,8 @@ int main()
     {
       for(int j=0; j<r; j++)
 	{
-	  B[i*s+j]=j*r+i+1;
-	  std::cout<<B[i*n+j]<< "  "; 
+	  B[i*r+j]=i*r+j;
+	  std::cout<<B[i*r+j]<< "  "; 
 	}
       std::cout<<"\n";
     }
@@ -44,8 +44,8 @@ int main()
   if(m==s){
     mult(A,B,C);}
   else
-    std::cout<< "el tamaño de la matrices no es el adecuado para multiplicarlas"<<std::endl;
-  
+    std::cout<< "el tamanho de la matrices no es el adecuado para multiplicarlas"<<std::endl;
+  return 0;
 }
 void mult(std::vector<double> &a, std::vector<double> &b, std::vector<double> &c)
 {
@@ -54,11 +54,11 @@ void mult(std::vector<double> &a, std::vector<double> &b, std::vector<double> &c
     {
       for(int j=0; j<r; j++)
 	{
-	  for(int ii=0; ii<s-1;ii++)
+	  for(int ii=0; ii<s;ii++)
 	    {
-	      c[i*n+j] += (a[i*n+ii]) * (b[ii*s+j]);
+	      c[i*r+j] += (a[i*s+ii]) * (b[ii*r+j]);
 	    }
-	  std::cout<<c[i*n+j]<< "  "; 
+	  std::cout<<c[i*r+j]<< "  "; 
 	}
       std::cout<<"\n";
     }
