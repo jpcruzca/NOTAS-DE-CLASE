@@ -1,10 +1,10 @@
 #include<iostream>
 #include<cmath>
 #include<vector>
-const int n=3;
-const int m=4;
-const int s=4;
-const int r=2;
+const int n=9;
+const int m=9;
+const int s=9;
+const int r=9;
 void mult(std::vector<double> &a, std::vector<double> &b, std::vector<double> &c);
 int main()
 {

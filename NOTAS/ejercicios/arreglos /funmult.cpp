@@ -66,9 +66,9 @@ void mult(std::vector<double> &a, std::vector<double> &b, std::vector<double> &c
 	{
 	  for(int ii=0; ii<m;ii++)
 	    {
-	      c[i*n+j] += (a[i*n+ii]) * (b[ii*n+j]);
+	      c[i*m+j] += (a[i*m+ii]) * (b[ii*m+j]);
 	    }
-	  std::cout<<c[i*n+j]<< "  "; 
+	  std::cout<<c[i*m+j]<< "  "; 
 	}
       std::cout<<"\n";
     }

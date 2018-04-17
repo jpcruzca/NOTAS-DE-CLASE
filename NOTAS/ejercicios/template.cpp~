@@ -1,0 +1,6 @@
+#include<iostream>
+template <class T> 
+T max(T a, T b, T c);
+{
+
+}

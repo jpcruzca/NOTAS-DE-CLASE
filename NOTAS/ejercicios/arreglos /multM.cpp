@@ -16,7 +16,7 @@ int main()
     {
       for(int j=0; j<m; j++)
 	{
-	  A[i*n+j]=i*n+j+1;
+	  A[i*m+j]=i*n+j+1;
 	  std::cout<<A[i*n+j]<< "  "; 
 	}
       std::cout<<"\n";
@@ -27,7 +27,7 @@ int main()
     {
       for(int j=0; j<m; j++)
 	{
-	  B[i*n+j]=j*m+i+1;
+	  B[i*m+j]=j*m+i+1;
 	  std::cout<<B[i*n+j]<< "  "; 
 	}
       std::cout<<"\n";
@@ -47,7 +47,7 @@ int main()
     {
       for(int j=0; j<n; j++)
 	{
-	  C[i*n+j]=0;
+	  C[i*m+j]=0;
 	}
     }
   std::cout<< "A*B" <<std::endl;//MULTIPLICACION
@@ -58,9 +58,9 @@ int main()
 	{
 	  for(int ii=0; ii<m;ii++)
 	    {
-	      C[i*n+j] += (A[i*n+ii]) * (B[ii*n+j]);
+	      C[i*m+j] += (A[i*m+ii]) * (B[ii*m+j]);
 	    }
-	  std::cout<<C[i*n+j]<< "  "; 
+	  std::cout<<C[i*m+j]<< "  "; 
 	}
       std::cout<<"\n";
       
