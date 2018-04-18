@@ -7,14 +7,14 @@ int main()
 {
   std::cout.precision(16);
   std::cout.setf(std::ios::scientific);
-  double xl=12,xu=18,eps=0.000000001,Nmax=100;
+  double xl=0.5,xu=2.0,eps=0.000000001,Nmax=100;
   std::cout << bisection(xl,xu,eps,Nmax, f)<< std::endl;
   
 }
 
 double f(double x)
 {
-  return  9.81*68.1/x*(1-exp(-x*10/68.1)) - 40;
+  return  std::pow(x,3)-2*std::sin(x);
 }
 
 double bisection(double xl, double xu, double eps, double Nmax,fun f )
@@ -28,6 +28,8 @@ double bisection(double xl, double xu, double eps, double Nmax,fun f )
 	xu=xr;
       if(std::fabs(f(xr)) < eps ||  Nmax==0)
 	return xr;
-      else
-	return bisection(xl,xu,eps,Nmax-1, f); 
+      else{
+	std::cout << xr << std::endl;
+	return bisection(xl,xu,eps,Nmax-1, f);}
+      
 }

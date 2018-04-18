@@ -1,5 +1,5 @@
 #include<iostream>
-#include<cmath>
+//#include<cmath>
 #include<vector>
 const int n=99;
 const int m=99;
