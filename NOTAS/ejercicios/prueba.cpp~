@@ -1,0 +1,15 @@
+#include<iostream>
+int sum( int x, int y);
+int main()
+{
+
+}
+int sum( int x, int y)
+{
+  if(0==n)
+    {
+      return 0;
+    }
+  else
+    sum(n-1);
+}

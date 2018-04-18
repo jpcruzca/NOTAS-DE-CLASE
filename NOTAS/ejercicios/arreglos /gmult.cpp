@@ -1,10 +1,10 @@
 #include<iostream>
 #include<cmath>
 #include<vector>
-const int n=9;
-const int m=9;
-const int s=9;
-const int r=9;
+const int n=99;
+const int m=99;
+const int s=99;
+const int r=100;
 void mult(std::vector<double> &a, std::vector<double> &b, std::vector<double> &c);
 int main()
 {
@@ -27,7 +27,10 @@ int main()
     {
       for(int j=0; j<r; j++)
 	{
-	  B[i*r+j]=i*r+j;
+	  if(i==j)
+	    B[i*r+j]=1;
+	  else
+	    B[i*r+j]=0;
 	  std::cout<<B[i*r+j]<< "  "; 
 	}
       std::cout<<"\n";
