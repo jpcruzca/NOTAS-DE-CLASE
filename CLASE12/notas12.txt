@@ -1,0 +1,16 @@
+ALGEBRA LINEAL
+
+****
+NETLIB=> librerias
+optimizar -O2 //bandera
+MKL => libreria de alto desempeño
+AMD
+BLAS
+librerias
+GSL => para compilar -lgsl
+{
+ -lgsl -lgslcblas  => bandera para compilar usando la libreria gsl
+}
+*****
+EIGEN 
+*****
